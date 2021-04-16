@@ -1,0 +1,98 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Karla', sans-serif;
+  font-size: 1.5em;
+  line-height: 1.5em;
+}
+
+ul {
+  list-style-type: none;
+  line-height: 2em;
+}
+
+
+#site-wrap {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 0 0;
+  grid-template-areas:
+    "header header header header"
+    "cta cta about about"
+    "footer footer footer footer";
+}
+
+.header {
+  background-color: #ffffff;
+  grid-area: header;
+  padding: 10%;
+  color: #97a5bd;
+}
+
+.cta {
+  background-color: #2bb3b0;
+  grid-area: cta;
+  padding: 20%;
+  color: #ffffff;
+  text-align: left;
+}
+
+.about {
+ background-color: rgba(43, 179, 176, 0.5);
+ grid-area: about;
+ padding: 20%;
+ color: #ffffff;
+}
+
+.footer {
+  background-color: #ffffff;
+  grid-area: footer;
+  padding: 10%;
+}
+ /*CSS button styles snippet from CSS Tricks https://css-tricks.com/overriding-default-button-styles/ */
+.cta-button {
+    display: inline-block;
+    width: 75%;
+    border: none;
+    padding: 1rem 2rem;
+    margin: 0;
+    text-decoration: none;
+    background: #bfde33;
+    color: #ffffff;
+    font-family: 'Karla',sans-serif;
+    font-size: 1.74rem;
+    cursor: pointer;
+    text-align: center;
+    transition: background 250ms ease-in-out,
+                transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.cta-button:hover,
+.cta-button:focus {
+    background:#bfde33a2;
+}
+
+.cta-button:focus {
+    outline: 1px solid #fff;
+    outline-offset: -4px;
+}
+
+.cta-button:active {
+    transform: scale(0.99);
+}
+
+
+@media screen and (max-width:600px){
+  #site-wrap {
+    grid-template-areas:
+    "header header header header"
+    "cta cta cta cta"
+    "about about about about"
+    "footer footer footer footer";
+  }
+
+}
